@@ -1,0 +1,21 @@
+{% extends "subpage.html" %}
+
+{% block subcontent %}
+    <h2>{{ page.title }}</h2>
+
+    <hr/>
+
+    <ul>
+        {% for exhibition in page.extra.exhibitions %}
+            <li class="card lead text-mute">
+                <h2>{{ exhibition.title }}</h2>
+                {{ exhibition.content }}
+            </li>
+        {% else %}
+            <li class="card lead text-mute">
+                {{ page.content | safe }}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "subpage.html" %}
+
+{% block subcontent %}
+    <h2 class="ma0 mt3 mb1"><a href="/">JaLuLe</a></h2>
+
+    <img class="ma0 mt2 mb2 painting" src="/img/{{ page.slug }}.jpg" alt="Anita Carnal - {{ page.title }}">
+
+    <br>
+
+    <div class="card mt1">
+        <h2 class="ma0">{{ page.title }}</h2>
+        <h3 class="ma0">{{ page.extra.material  }}</h3>
+
+        <h3 class="ma0">{{ page.extra.dimensions }}</h3>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block basecontent -%}
+
+    <h1 class="ma0 mt8">JaLuLe</h1>
+    <h2 class="ma0 mb8">Anita Carnal</h2>
+
+    <nav class="ma0 mb8">
+        {% for page in section.pages %}
+            <p class="ma1"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></p>
+        {% endfor %}
+    </nav>
+
+    <hr>
+
+    <style type="text/css">
+        .grid>a{
+            display: inline-block;
+            width: 35%;
+            vertical-align: top;
+        }
+
+        .fit-width{
+            width: 100%;
+        }
+    </style>
+
+    <div class="grid">
+        {% set paintings_section = get_section(path="paintings/_index.md") %}
+        {% for page in paintings_section.pages %}
+            <a href="{{ page.permalink | safe }}" class="ma2">
+                <img class="fit-width" src="/img/thumbs/{{ page.slug }}.jpg" alt="Gemälde {{ page.title }}">
+                <p class="mt1 lead text-muted">{{ page.title }}</p>
+            </a>
+        {% endfor %}
+    </div>
+
+{%- endblock %}

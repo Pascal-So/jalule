@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ super() }}{% endblock %}
+
+{% block basecontent -%}
+
+    {% block subcontent %}{% endblock %}
+
+    <hr/>
+
+    <p class="mb4"><a href="/">
+        <img class="backicon" src="/img/arrowLeft.svg">
+        <br>
+        zurück
+    </a></p>
+
+{%- endblock %}

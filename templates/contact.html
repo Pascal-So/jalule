@@ -1,0 +1,30 @@
+{% extends "subpage.html" %}
+
+{% block subcontent %}
+    <h2>{{ page.title }}</h2>
+
+    <img class="portrait" src="/img/anita.jpg" alt="Anita Carnal">
+
+    <br>
+    <br>
+
+    <h2 class="ma0">Anita Carnal</h2>
+    <p class="ma0 lead text-muted">Kappelisackerstrasse 69</p>
+    <p class="ma0 lead text-muted">3063 Ittigen</p>
+    <br>
+    <p class="ma0 lead text-muted">+41 78 734 25 50</p>
+    <p class="ma0 lead text-muted"><a href="&#109;&#97;&#x69;&#x6c;t&#111;:&#x61;&#99;&#x77;&#118;&#64;b&#108;&#x75;ew&#105;&#x6e;&#x2e;&#x63;h">&#x61;&#99;&#x77;&#118;&#64;b&#108;&#x75;ew&#105;&#x6e;&#x2e;&#x63;h</a></p>
+
+    <br>
+
+    <hr>
+
+    <div class="narrow center align-left lead">
+        {{ page.content | safe }}
+    </div>
+    <div class="clearfix"></div>
+    <hr>
+
+    <br>
+
+{% endblock %}
