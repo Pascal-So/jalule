@@ -12,6 +12,9 @@
         <h3 class="ma0">{{ page.extra.material  }}</h3>
 
         <h3 class="ma0">{{ page.extra.dimensions }}</h3>
+        {% if page.extra.sold %}
+            <h3 class="ma0">Verkauft</h3>
+        {% endif %}
     </div>
 
 {% endblock %}
